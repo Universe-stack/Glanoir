@@ -1,6 +1,6 @@
 export default {
-    name: 'product-men',
-    title: 'Product-men',
+    name: 'users-choice',
+    title: 'users-choice',
     type: 'document',
     fields: [
       {
@@ -35,6 +35,31 @@ export default {
         name: 'details',
         title: 'Details',
         type: 'string',
+      },
+      { 
+        name: 'rating',
+        title: 'Rating',
+        type: 'number',
+      },
+      { 
+        name:'form',
+        title: 'Form',
+        type: 'string',
+      },
+      { 
+        name: 'type',
+        title: 'Type',
+        type: 'string',
+      },
+      { 
+        name: 'brand',
+        title: 'Brand',
+        type: 'string',
+      },
+      { 
+        name: 'size',
+        title: 'Size',
+        type: 'number',
       }
     ]
   }

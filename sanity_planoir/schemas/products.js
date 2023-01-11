@@ -1,6 +1,6 @@
 export default {
-    name: 'product-women',
-    title: 'Product-women',
+    name: 'products',
+    title: 'Products',
     type: 'document',
     fields: [
       {
@@ -34,6 +34,36 @@ export default {
       { 
         name: 'details',
         title: 'Details',
+        type: 'string',
+      },
+      { 
+        name: 'rating',
+        title: 'Rating',
+        type: 'number',
+      },
+      { 
+        name:'form',
+        title: 'Form',
+        type: 'string',
+      },
+      { 
+        name: 'type',
+        title: 'Type',
+        type: 'string',
+      },
+      { 
+        name: 'brand',
+        title: 'Brand',
+        type: 'string',
+      },
+      { 
+        name: 'size',
+        title: 'Size',
+        type: 'number',
+      },
+      { 
+        name: 'sex',
+        title: 'Sex',
         type: 'string',
       }
     ]

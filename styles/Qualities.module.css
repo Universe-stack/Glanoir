@@ -1,0 +1,50 @@
+.Qualities_container {
+    background-color: #f5f5f5;
+    padding: 60px;
+}
+
+.Qualities_inner ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    gap: 10px;
+}
+
+.Qualities_inner ul li{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Qualities_inner ul li h3{
+    font-size: medium;
+    font-family: 'Gotham';
+
+}
+
+.Qualities_inner ul li p{
+    font-family: 'Gotham' sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    width: 50%;
+    display: block; 
+}
+
+.Qualities_inner ul li p::before{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 1px;
+    margin: 0 auto 20px;
+    background-color: #000;
+    
+}
+
+.display_none{
+    display: block;
+}
