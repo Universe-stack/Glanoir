@@ -13,8 +13,9 @@ import {useRouter} from 'next/router';
 
 const FormControl = () => {
 
+    const {totalPrice} = useStateContext();
+    yconst [data, setData] = useState({});
 
-    const API_KEY = 'sk_test_d85dbe6e699034e945cae96269266bb4b5a634b3';
 
     const router = useRouter();
     console.log(router.query);
@@ -22,6 +23,8 @@ const FormControl = () => {
     const reference =router.query.reference;
     console.log(reference);
 
+
+    const API_KEY = process.env.NEXT_PUBLIC_PAYSTACK_SECRET_KEY ;
 
     async function getResponse() {
         const response = await fetch(
@@ -38,10 +41,6 @@ const FormControl = () => {
         console.log(data);
     }
     
-
-    const {totalPrice} = useStateContext();
-
-    const [data, setData] = useState({});
     
     const handleSubmit=(e)=>{
         e.preventDefault();
