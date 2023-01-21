@@ -1,0 +1,133 @@
+.container {
+    width: 600px;
+    height: 550px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    line-height: 1.5;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+    .container::after {
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+      width: 900px;
+      height: 900px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      flex-direction: start;
+    }
+
+    .buttons>label{
+      display: flex;
+      justify-content: space-between;
+      
+    }
+
+    .buttons>label>input{
+      width: 20px;
+      margin-top: 6.4px;
+     
+      
+    }
+
+
+    .middle_div{
+      margin-right: 75px;
+    }
+
+    
+
+    .label_first{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .containerclose {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background-color: blue;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      color: #2E4052;
+      border-radius: 50%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+      cursor: pointer;
+      display: none;
+    }
+  
+    .img {
+      width: 250px;
+      height: 80%;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .containertext {
+      padding: 10px 40px 10px 10px;
+    }
+      
+    .containertext h2 {
+        font-size: 1.2rem;
+        color: #1A2250;
+      }
+  
+      
+      .containertext p {
+        font-size: 14px;
+        color: #3B4169;
+        margin: 10px 0;
+      }
+  
+      .containertext input {
+        width: 100%;
+        border: none;
+        padding: 14px;
+        border-radius: 3px;
+      }
+  
+      .containertext input {
+        border: 2px solid #DADDEC;
+        margin: 5px 0 10px;
+        font-size: 1rem;
+        color: #656880;
+      }
+  
+      .containertext button {
+        background-image: linear-gradient(to right, #89CAFF, #6589FF);
+        display: block;
+        color: red;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 5px 20px #89caff94;
+        transition: box-shadow .3s ease-in-out;
+        width: 100%;
+        border: none;
+        padding: 14px;
+        border-radius: 3px;
+      }
+  
+      .containertext button:hover {
+        box-shadow: none;
+      }
+  
+      .containertext span {
+        display: block;
+        text-align: center;
+        margin: 20px 0 0;
+        color: #BABDCB;
+        font-size: 12px;
+      }
+    

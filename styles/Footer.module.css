@@ -97,8 +97,26 @@
     padding-bottom: 1rem ;
 }
 
-.social_media small{
+.social_media small >svg{
+    font-size: 17px;
+    cursor: pointer;
+}
 
+.social_media small:first-child> svg{
+    color: blue;
+}
+
+.social_media small:nth-child(2)> svg{
+    color: rgb(249, 1, 249);
+}
+
+.social_media small:nth-child(3)> svg{
+    color: rgb(49, 214, 239);
+}
+.social_media small:nth-child(4)> svg{
+    color: rgb(1, 249, 51);
+}
+
+.social_media small{
     padding: 0.5rem ;
-    color: hsl(210deg 8% 75%);
 }

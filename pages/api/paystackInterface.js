@@ -1,9 +1,29 @@
 
-export const handlePayment =(email,amount) =>{
-    const handler = PaystackPop.setup({
+export const handlePayment =(email,amount,nameItem,priceItem,amountItem,shipping,totalAmount) =>{
+    
+  const handler = PaystackPop.setup({
         key: 'pk_test_2bac86ed63ea670da42d698224dd35021ae59a49', // Replace with your public key
         email,
         amount:amount*100,
+        metadata:{
+          custom_fields:[
+            {
+              display_name: "products",
+              variable_name:"cart_items",
+              value:`${nameItem}` 
+            },
+            {
+              display_name: "prices",
+              variable_name:"cart_prices",
+              value:`${priceItem}` 
+            },
+            {
+              display_name: "Amount",
+              variable_name:"cart_amount",
+              value:`${amountItem}` 
+            }
+          ]
+        },
 
         onClose: ()=>{
           alert('Window closed.');

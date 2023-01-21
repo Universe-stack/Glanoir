@@ -1,16 +1,42 @@
 import Link from 'next/link';
-import React from 'react'
+import React,{useState}from 'react'
 
 import styles from '../styles/Footer.module.css';
 
+import { FaFacebook } from "react-icons/fa";
+import {FaInstagram } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaWhatsappSquare} from "react-icons/fa";
+
 const Footer = () => {
+
+    const [data,setData] = useState({});
+    console.log(data);
+  
+    const formHandler=(e)=>{
+        setData({
+            ...data,
+            [e.target.name]:e.target.value
+        })
+    } 
+
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(data);
+    
+    }
+
+    
+
+
   return (
     <div className={styles.Footer_container}>
         <div className={styles.social_media}>
-          <small>Twitter</small>
-          <small>Gram</small>
-          <small>Facebook</small>
-          <small>Whatsapp</small>
+          <small><FaFacebook/></small>
+          <small><FaInstagram/> </small>
+          <small> <FaTwitterSquare/> </small>
+          <small> <FaWhatsappSquare/> </small>
         </div>
 
         <div className={styles.Footer_inner_start}>
@@ -18,8 +44,8 @@ const Footer = () => {
             <ul>
                 <li>
                     <p> Stay in touch? Sign up now…</p>
-                    <input type="text" data-validate="{required:true}" maxLength="12" placeholder="enter your email address" />
-                    <button type='submit'>Join</button>
+                    <input type="text" data-validate="{required:true}" placeholder="enter your email address" onChange={formHandler}/>
+                    <button type='submit' onClick={handleSubmit}>Join</button>
                 </li>
             </ul>
         </div>

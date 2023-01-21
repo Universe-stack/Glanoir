@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 const Layout=({children}) => {
   return (
-    <>
+    <div classname={styles.layout}>
         <Nav />
         <Header />
        <div>
@@ -16,7 +16,7 @@ const Layout=({children}) => {
           </main>
        </div>
        <Footer />
-    </>
+    </div>
    
   )
 }

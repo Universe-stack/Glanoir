@@ -9,6 +9,9 @@ import Qualities from '../Components/Qualities';
 import FormControl from '../Components/formControl';
 
 import {client} from '../lib/client';
+import Image from 'next/image';
+
+import heropic from '../assets/heropic.png'
 
 
 
@@ -21,12 +24,14 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
       <Meta title="Planoir" keywords="e-commerce, fashion, wears, shoes" description="" />
       {console.log(trending)}
       <div className='banner_top'>
-          <div className='banner_top_text'>
-            <h1>FIND YOUR BEST FITTING..</h1>
+          <div className='banner_top-text'>
+            <h1>SHOP LIKE NEVER BEFORE</h1>
+            <p>Stay updated with the latest trends in the world of fashion. In a world where everyone looks the same, we help you to stay unique with our collection of wears from different luxury brands..</p>
+            <button className='btn_hero'>SHOP NOW</button>
           </div>
 
-          <div className='banner_top_text'>
-            <h1>FIND YOUR BEST FITTING..</h1>
+          <div className='banner_top-right'>
+            <Image src={heropic} height="300px" className='banner_top-img' width="300px"/>
           </div>    
       </div>
 
@@ -47,7 +52,7 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
       <div className='marquee'>
         <h2> MONTHLY TRENDIES</h2>
         <div className="maylike-products-container track">
-          {monthlyTrending?.map((product) => <UsersChoice key={product._id} product={product}/>)}
+          {monthlyTrending?.map((product) => <Trending key={product._id} product={product}/>)}
         </div>
       </div>
       
