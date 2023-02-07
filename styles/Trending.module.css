@@ -8,6 +8,20 @@
     
 }
 
+@media(max-width:428px) {
+  .container{
+    display: block;
+    margin: 2rem;
+  }
+
+  .Trending{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+}
+
+
+
 .container h2{
   font-family: arial,sans-serif,'Gotham';
 }

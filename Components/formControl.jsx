@@ -139,7 +139,7 @@ const FormControl = () => {
 
                     
                             <button type="submit">CHECKOUT</button>
-                            <span>No spams included</span>
+                            
                         </div>
                 </form>
             </div>

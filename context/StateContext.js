@@ -7,7 +7,7 @@ export const StateContext =({children})=>{
 
     const [showCart, setShowCart]= useState(false);
     const [cartItems, setCartItems] = useState([]);
-    const [totalPrice, setTotalPrice]= useState(40);
+    const [totalPrice, setTotalPrice]= useState(0);
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
 
@@ -23,14 +23,14 @@ export const StateContext =({children})=>{
             setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price*quantity);
             setTotalQuantities((prevTotalQuantities)=>prevTotalQuantities + quantity);
             
-            const updatedCartItems = cartItems.map((cartProduct)=>{
-                if(cartProduct._id === product._id) return{
-                    ...cartProduct,
-                    quantity : cartProduct.quantity + quantity
-                }
-            })
+            for (let i = 0; i < cartItems.length; i++) {
+                const cartProduct = cartItems[i];
+                if(cartProduct._id === product._id){
+                    cartProduct.quantity += quantity
+                }}
+            const updatedCartItems= cartItems;
 
-            setCartItems(updatedCartItems);
+            setCartItems((prev)=>prev = updatedCartItems);
             
         } else{
             product.quantity = quantity;

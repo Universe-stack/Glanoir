@@ -1,4 +1,6 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
+
+import Link from 'next/link';
 
 import Meta from '../Components/Meta';
 import Trending from '../Components/Trending';
@@ -11,7 +13,7 @@ import FormControl from '../Components/formControl';
 import {client} from '../lib/client';
 import Image from 'next/image';
 
-import heropic from '../assets/heropic.png'
+import heropic from '../assets/appleP.png'
 
 
 
@@ -22,16 +24,16 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
   return (
     <div >
       <Meta title="Planoir" keywords="e-commerce, fashion, wears, shoes" description="" />
-      {console.log(trending)}
+    
       <div className='banner_top'>
           <div className='banner_top-text'>
             <h1>SHOP LIKE NEVER BEFORE</h1>
-            <p>Stay updated with the latest trends in the world of fashion. In a world where everyone looks the same, we help you to stay unique with our collection of wears from different luxury brands..</p>
-            <button className='btn_hero'>SHOP NOW</button>
+            <p>Stay updated with the latest trends in the world of fashion. In a world where everyone looks the same, we help you to stay unique with our collection of wears from different luxury brands</p>
+            <button className='btn_hero'><Link href={"/product"}> <span>SHOP NOW</span></Link></button>
           </div>
 
           <div className='banner_top-right'>
-            <Image src={heropic} height="300px" className='banner_top-img' width="300px"/>
+            <Image src={heropic}  className='banner_top-img'/>
           </div>    
       </div>
 
@@ -71,10 +73,10 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
 }
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "trending"]';
+  const query = '*[_type == "products" && trending == true]';
   const trending = await client.fetch(query);
 
-  const monthlyTrendQuery = '*[_type == "monthly-trendies"]';
+  const monthlyTrendQuery = '*[_type == "products" && monthlytrending == true]';
   const monthlyTrending = await client.fetch(monthlyTrendQuery);
 
   const userQuery = '*[_type == "users-choice"]';

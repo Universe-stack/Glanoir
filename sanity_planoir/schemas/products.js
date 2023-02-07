@@ -65,6 +65,16 @@ export default {
         name: 'sex',
         title: 'Sex',
         type: 'string',
+      },
+      { 
+        name: 'trending',
+        title: 'Trending',
+        type: 'boolean',
+      },
+      { 
+        name: 'monthlytrending',
+        title: 'Monthlytrending',
+        type: 'boolean',
       }
     ]
   }
