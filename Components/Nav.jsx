@@ -11,7 +11,7 @@ import {TiThMenu} from 'react-icons/ti';
 import Link from 'next/link';
 
 import Cart from './Cart';
-import { useStateContext } from '../context/StateContext';
+import { useStateContext } from '../context/stateContext';
 
 
 const Nav = (props) => {

@@ -55,8 +55,6 @@ a {
   border: 0.1px solid black;
 }
 
-
-
 .desktop_only{
   display: none;
 }
@@ -83,7 +81,7 @@ a {
 
 }
 
-@media(max-width:428px){
+@media(max-width:750px){
   .destopOnly{
     display: none;
   } 
@@ -455,16 +453,23 @@ a {
   color: #0E243D;
 }
 
-.trending_products span{
+.spanDiv{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  overflow-x:scroll;
+  
 }
 
 @media(max-width:458px){
-  .trending_products span{
+  .spanDiv{
+    height: 80vh;
+    overflow-x:scroll;
+    margin-top: 10px;
     flex-direction: column;
-    overflow-y:scroll;
+    overflow-x:scroll;
+    overflow: auto;
   }
 }
 
@@ -608,6 +613,7 @@ width: 100%;
   font-weight: 800;
   margin-top: 6px;
   color: black;
+  display: flex;
 }
 
 .hero-banner-container{

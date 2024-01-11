@@ -41,9 +41,9 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
 
       <div className='trending_products'>
       <h2> TRENDING / NEW ARRIVALS</h2>
-      <span>
+      <div className='spanDiv'>
       {trending?.map((product) => <Trending key={product._id} product={product} />)}
-      </span>
+      </div>
       </div>
 
       <div>
@@ -57,8 +57,6 @@ const Home = ({trending, monthlyTrending,usersChoice}) =>{
           {monthlyTrending?.map((product) => <Trending key={product._id} product={product}/>)}
         </div>
       </div>
-      
-     
       
  
       <div className='Achievements'>

@@ -31,6 +31,7 @@
     font-weight: 800;
     font-size: 16px;
     color: hsl(210deg 8% 75%);
+    
 }
 
 .Footer_links ul {
@@ -38,6 +39,8 @@
     line-height: 1.6;
     padding: 1.25rem;
     text-align: left;
+    pointer-events:none;
+    opacity:0.6; 
 }
 
 .Footer_links ul li{
@@ -189,23 +192,23 @@
     padding-bottom: 1rem ;
 }
 
-.social_media small >svg{
+.social_media small a>svg{
     font-size: 17px;
     cursor: pointer;
 }
 
-.social_media small:first-child> svg{
+.social_media small:first-child a> svg{
     color: blue;
 }
 
-.social_media small:nth-child(2)> svg{
+.social_media small:nth-child(2) a> svg{
     color: rgb(249, 1, 249);
 }
 
-.social_media small:nth-child(3)> svg{
+.social_media small:nth-child(3) a> svg{
     color: rgb(49, 214, 239);
 }
-.social_media small:nth-child(4)> svg{
+.social_media small:last-child a> svg{
     color: rgb(1, 249, 51);
 }
 

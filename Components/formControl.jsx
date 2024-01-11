@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 import { handlePayment } from '../pages/api/paystackInterface';
 
-import { useStateContext } from '../context/StateContext';
+import { useStateContext } from '../context/stateContext';
 import { Data } from '@react-google-maps/api';
 
 import {useRouter} from 'next/router';

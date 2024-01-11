@@ -1,14 +1,12 @@
 import React,{useState} from 'react';
-import Link from 'next/link';
 
 import { client, urlFor } from '../../../../lib/client';
 
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
-import ReactStars from 'react-stars';
 import Trending from '../../../../Components/Trending';
 
-import { useStateContext } from '../../../../context/StateContext';
+import { useStateContext } from '../../../../context/stateContext'
 
 
 
@@ -63,7 +61,7 @@ const Items = ({productItem,altproductItem}) => {
                 </div>
                 <h4>Details: </h4>
                 <p>{item.details}</p>
-                <p className="price">${item.price}</p>
+                <p className="price"><span>&#8358;</span>{item.price}</p>
                 <div className="quantity">
                   <h3>Quantity:</h3>
                   <p className="quantity-desc">

@@ -33,10 +33,10 @@ const Footer = () => {
   return (
     <div className={styles.Footer_container}>
         <div className={styles.social_media}>
-          <small><FaFacebook/></small>
-          <small><FaInstagram/> </small>
-          <small> <FaTwitterSquare/> </small>
-          <small> <FaWhatsappSquare/> </small>
+          <small><a href='https://www.facebook.com/profile.php?id=100070419206440'><FaFacebook/></a></small>
+          <small><a href='https://www.instagram.com/beihtechnologies/'><FaInstagram/> </a> </small>
+          <small> <a href='https://twitter.com/BeihtechNg'><FaTwitterSquare/></a> </small>
+          <small><a href='#'> <FaWhatsappSquare/> </a></small>
         </div>
 
         <div className={styles.Footer_inner_start}>

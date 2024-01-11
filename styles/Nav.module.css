@@ -7,7 +7,7 @@
     height: 3rem;
     align-items: center;
     padding: 2.25rem 1rem;
-    width: 100vw;
+    width: 100%;
     color: #0E243D;
   }
 
@@ -47,7 +47,7 @@
     transition: ease-in-out;
   }
 
-  @media(max-width: 480px) {
+  @media(max-width: 750px) {
     .navbar_links ul {
       display: flex;
       flex-direction: column;
@@ -64,8 +64,6 @@
     }
     
   }
-
-
 
 
   .searchbar{

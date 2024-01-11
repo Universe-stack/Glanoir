@@ -10,8 +10,8 @@ const about = () => {
 
 
   const [drop,setDrop]= React.useState(false);
-  const [dropA,setDropA]= React.useState(false);
-  const [dropB,setDropB]= React.useState(false);
+  const [dropA,setDropA]= React.useState(true);
+  const [dropB,setDropB]= React.useState(true);
 
 
   console.log(drop);

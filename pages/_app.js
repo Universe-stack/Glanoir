@@ -3,7 +3,7 @@ import '../styles/globals.css'
 
 import Layout from '../Components/Layout'
 
-import { StateContext } from '../context/StateContext'
+import { StateContext } from '../context/stateContext'
 import {Toaster} from 'react-hot-toast';
 
 import Router from 'next/router';

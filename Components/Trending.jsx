@@ -30,7 +30,7 @@ const Trending = ({ product}) => {
               className="product-image"
             />
             <p className="product-name">{product.name}</p>
-            <p className="product-price">${product.price}</p>
+            <p className="product-price"><span>&#8358;</span>{product.price}</p>
             <ReactStars
               value={product.rating}
               count={5}

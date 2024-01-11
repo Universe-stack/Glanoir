@@ -45,8 +45,6 @@ export const getServerSideProps = async (ctx) => {
   const product = await client.fetch(query);
 
   console.log(product)
-  
-
   return {
     props: {
         product,slugs,category}

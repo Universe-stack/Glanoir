@@ -2,7 +2,7 @@
 export const handlePayment =(email,amount,nameItem,priceItem,amountItem,shipping,totalAmount) =>{
     
   const handler = PaystackPop.setup({
-        key: 'pk_test_2bac86ed63ea670da42d698224dd35021ae59a49', // Replace with your public key
+        key: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY, // Replace with your public key
         email,
         amount:amount*100,
         metadata:{
